@@ -29,10 +29,14 @@ export class MyApp {
 
   initializeApp() {
     this.platform.ready().then(() => {
-      // Okay, so the platform is ready and our plugins are available.
-      // Here you can do any higher level native things you might need.
+      this.statusBar.overlaysWebView(false);
       this.statusBar.styleDefault();
+      this.statusBar.backgroundColorByHexString('#f8f8f8');
       this.splashScreen.hide();
+
+      updateService.checkUpdate();
+      native.initNativeService();
+     
     });
   }
 

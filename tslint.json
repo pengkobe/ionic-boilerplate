@@ -1,11 +1,47 @@
 {
+  "extends": ["tslint-angular"],
   "rules": {
-    "no-duplicate-variable": true,
-    "no-unused-variable": [
-      true
+    "directive-selector": [
+      false,
+      "attribute",
+      ["dir-prefix1", "dir-prefix2"],
+      "camelCase"
+    ],
+    "component-selector": [
+      false,
+      "element",
+      ["cmp-prefix1", "cmp-prefix2"],
+      "kebab-case"
+    ],
+
+    "angular-whitespace": [true, "check-interpolation", "check-semicolon"],
+    "use-input-property-decorator": true,
+    "use-output-property-decorator": true,
+    "use-host-property-decorator": true,
+    "no-attribute-parameter-decorator": true,
+    "no-input-rename": true,
+    "no-output-on-prefix": true,
+    "no-output-rename": true,
+    "no-forward-ref": false,
+    "use-life-cycle-interface": true,
+    "use-pipe-transform-interface": true,
+    "no-output-named-after-standard-event": true,
+    "no-use-before-declare": false,
+    "component-class-suffix": [false, "Component"],
+    "directive-class-suffix": [true, "Directive"],
+    "max-classes-per-file": [true, 2],
+    "no-shadowed-variable": [
+      true,
+      {
+        "class": true,
+        "enum": true,
+        "function": true,
+        "interface": false,
+        "namespace": false,
+        "typeAlias": true,
+        "typeParameter": true,
+        "import": false
+      }
     ]
-  },
-  "rulesDirectory": [
-    "node_modules/tslint-eslint-rules/dist/rules"
-  ]
+  }
 }
