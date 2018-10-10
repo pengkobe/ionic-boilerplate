@@ -31,7 +31,9 @@ see:https://github.com/pengkobe/reading-notes/issues/420
 - http
 - 本地存储 √
 - 钩子( hooks ) √
-- 技巧工具( vscode、谷歌控制台等 )
+- NGRX
+- 技巧与工具( vscode、谷歌控制台等 )
+- 常用组件
 
 ## 运行环境介绍
 
@@ -92,6 +94,9 @@ see: [cordova-plugin](./doc/cordova-plugin.md)
 npm install @ngx-translate/core@9.1.1 --save
 npm install @ngx-translate/http-loader@2.0.1 --save
 ```
+
+## ngrx
+see: https://github.com/ngrx
 
 ## 钩子
 

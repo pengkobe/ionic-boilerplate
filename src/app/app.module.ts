@@ -14,6 +14,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { CoreModule } from '../core/core.module';
 import { SharedModule } from '../shared/shared.module';
 
+import { EffectsModule } from '@ngrx/effects';
+import { StoreModule } from '@ngrx/store';
+
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
@@ -32,6 +35,8 @@ import { ListPage } from '../pages/list/list';
     SharedModule,
     BrowserModule,
     IonicModule.forRoot(MyApp),
+    StoreModule.forRoot({}),
+    EffectsModule.forRoot([]),
   ],
   bootstrap: [IonicApp],
   entryComponents: [
