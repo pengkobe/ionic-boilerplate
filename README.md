@@ -7,24 +7,24 @@ with test tool &amp;&amp; push service &amp;&amp; update service &amp;&amp; code
 see:https://github.com/pengkobe/reading-notes/issues/420
 
 - 代码规范
-- 远程推送
-- 版本更新( apk )
-- 代码热更新
-- 物理返回键双击退出
-- 目录结构支持从项目主目录定位
-- 覆盖 ionic cli 默认配置
-- tslint 与 scsslint
-- 去除开机白屏
-- Angular 最佳实践自动检测
-- 定义好目录结构
-- 支持本地通知与远程通知
-- 支持多语言[中/英]
-- 服务
+- 远程推送 √
+- 版本更新( apk )  √
+- 代码热更新  √
+- 物理返回键双击退出  √
+- 目录结构支持从项目主目录相对定位  √ 
+- 覆盖 ionic cli 默认配置  √ 
+- tslint 与 scsslint  √ 
+- 去除开机白屏 √ 
+- Angular 最佳实践自动检测 √ 
+- 定义好目录结构 √ 
+- 支持本地通知与远程通知 √ 
+- 支持多语言[中/英] √ 
+- 服务 √ 
 - 错误上报
 - 用户行为
 - http
-- 本地存储( cache/disk )
-- native
+- 本地存储( cache/disk ) 
+- native 
 
 ## 代码热更新
 
