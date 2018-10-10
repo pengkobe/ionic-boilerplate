@@ -6,30 +6,77 @@ with test tool &amp;&amp; push service &amp;&amp; update service &amp;&amp; code
 
 see:https://github.com/pengkobe/reading-notes/issues/420
 
+- 开发流程与规范, see [README-dev-spec](./README-dev-spec.md)
+- 运行环境介绍 √
 - 代码规范 √
 - 远程推送 √
-- 版本更新( apk )  √
-- 代码热更新  √
-- 物理返回键双击退出  √
-- 目录结构支持从项目主目录相对定位  √ 
-- 覆盖 ionic cli 默认配置  √ 
-- tslint 与 scsslint  √ 
-- 去除开机白屏 √ 
-- Angular 最佳实践自动检测 √ 
-- 定义好目录结构 √ 
-- 支持本地通知与远程通知 √ 
-- 支持多语言[中/英] √ 
-- 服务 √ 
+- 版本更新( apk ) √
+- 代码热更新 √
+- 物理返回键双击退出 √
+- 目录结构支持从项目主目录相对定位 √
+- 覆盖 ionic cli 默认配置 √
+- tslint 与 scsslint √
+- 去除开机白屏 √
+- Angular 最佳实践自动检测 √
+- 定义好目录结构 √
+- 支持本地通知与远程通知 √
+- 支持多语言[中/英] √
+- 服务 √
+- native √
+  - 社交分享
+  - 地理定位
 - 错误上报
 - 用户行为
 - http
-- 本地存储( cache/disk ) 
-- native 
+- 本地存储
 - 技巧工具( vscode、谷歌控制台等 )
 
+## 监控
+
+### TalkingData
+
+### 极光
+
+## 运行环境介绍
+
+本脚手架运行环境为:
+
+```bash
+Ionic:
+
+   ionic (Ionic CLI)  : 4.1.2
+   Ionic Framework    : ionic-angular 3.9.2
+   @ionic/app-scripts : 3.1.11
+
+Cordova:
+
+   cordova (Cordova CLI) : not installed
+   Cordova Platforms     : not available
+   Cordova Plugins       : cordova-plugin-ionic-keyboard 2.1.3, cordova-plugin-ionic-webview 2.2.0, (and 28 other plugins)
+
+System:
+
+   NodeJS            : v8.9.1
+   npm               : 5.5.1
+   OS                : Windows 10
+```
+
+### android
+
+主要基于 android@6.4.0 运行，由于很多插件不兼容，不能运行 android@7，运行后会报错
+
 ## 代码规范
-* JavaScript 代码规范, 参见业界公认的 airbnb 规范: https://github.com/airbnb/javascript 
-* Angular 规范，直接参考官网: https://angular.io/guide/styleguide , 默认已集成部分检测工具， 如 `tslint-angular`，手动检测可以执行命令 `npm run lint`
+
+- JavaScript 代码规范, 参见业界公认的 airbnb 规范: https://github.com/airbnb/javascript
+- Angular 规范，直接参考官网: https://angular.io/guide/styleguide , 默认已集成部分检测工具， 如 `tslint-angular`，手动检测可以执行命令 `npm run lint`
+
+### 工具
+
+codelyzer, see: https://github.com/mgechev/codelyzer
+
+```bash
+npm i tslint-angular
+```
 
 ## 代码热更新
 
@@ -60,14 +107,6 @@ cordova-hcp build
 参考
 
 - https://github.com/pengkobe/reading-notes/issues/352
-
-## 代码规范
-
-codelyzer, see: https://github.com/mgechev/codelyzer
-
-```bash
-npm i tslint-angular
-```
 
 ## 远程推送
 
@@ -157,6 +196,14 @@ npm install --save @jiguang-ionic/jpush
   }
 }
 ```
+
+### 社交分享
+
+cordova-plugin-wechat
+
+### 定位
+
+cordova-plugin-baidumaplocation
 
 ### 国际化
 
