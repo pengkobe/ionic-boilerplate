@@ -26,8 +26,8 @@ see:https://github.com/pengkobe/reading-notes/issues/420
 - Cordova 插件 √
   - 社交分享
   - 地理定位
-- 错误上报
-- 用户行为
+- 错误上报 √
+- 用户行为 √
 - http
 - 本地存储 √
 - 钩子( hooks ) √
@@ -115,10 +115,9 @@ npm install raven-js --save
 ```
 
 ## 用户行为
-
-### TalkingData
-
-### 极光
+基于 TalkingData Cordova 插件进行开发，需要在官网下载最新库文件。
+* 官网：https://www.talkingdata.com/  
+* 集成文档: http://doc.talkingdata.com/posts/143  
 
 ## refer
 

@@ -10,11 +10,18 @@ import { GlobalService } from '@providers/global.service';
 import { QiniuUploadService } from '@providers/qiniu.upload.service';
 import { UpdateService } from '@providers/update.service';
 import { NativeService } from '@providers/native.service';
+import { DataService } from '@providers/data.service';
 
 @NgModule({
   imports: [CommonModule, HttpClientModule],
   exports: [],
   declarations: [],
-  providers: [NativeService, UpdateService, GlobalService, QiniuUploadService],
+  providers: [
+    NativeService,
+    UpdateService,
+    GlobalService,
+    QiniuUploadService,
+    DataService,
+  ],
 })
 export class CoreModule {}
