@@ -28,11 +28,6 @@ export class UpdateService {
   ) {}
 
   /**
-   * 初始化
-   */
-  init() {}
-
-  /**
    * 检查更新
    */
   checkUpdate() {
@@ -116,7 +111,7 @@ export class UpdateService {
         {
           text: '立即升级',
           handler: () => {
-            this.downloadApp(this.platform.is('android'), downloadUrl);
+            this.downloadApkFile(this.platform.is('android'), downloadUrl);
           },
         },
       ],
@@ -129,7 +124,7 @@ export class UpdateService {
    * @param isAndroid
    * @param downloadUrl
    */
-  downloadApp(isAndroid, downloadUrl: string) {
+  downloadApkFile(isAndroid, downloadUrl: string) {
     if (isAndroid) {
       const trustHosts = true;
       const options = {};

@@ -2,7 +2,7 @@
 
 with test tool &amp;&amp; push service &amp;&amp; update service &amp;&amp; code lint &amp;&amp; ...
 
-## Things to do
+## 支持项
 
 see:https://github.com/pengkobe/reading-notes/issues/420
 
@@ -32,12 +32,6 @@ see:https://github.com/pengkobe/reading-notes/issues/420
 - 本地存储
 - 钩子( hooks )
 - 技巧工具( vscode、谷歌控制台等 )
-
-## 监控
-
-### TalkingData
-
-### 极光
 
 ## 运行环境介绍
 
@@ -69,46 +63,11 @@ System:
 
 ## 代码规范
 
-- JavaScript 代码规范, 参见业界公认的 airbnb 规范: https://github.com/airbnb/javascript
-- Angular 规范，直接参考官网: https://angular.io/guide/styleguide , 默认已集成部分检测工具， 如 `tslint-angular`，手动检测可以执行命令 `npm run lint`
+see: [code-spec](./doc/code-spec.md)
 
-### 工具
+## 版本更新
 
-codelyzer, see: https://github.com/mgechev/codelyzer
-
-```bash
-npm i tslint-angular
-```
-
-## 代码热更新
-
-cordova-hot-code-push-plugin, see: https://github.com/nordnet/cordova-hot-code-push
-
-### 安装与使用
-
-```bash
-cordova plugin add cordova-hot-code-push-plugin
-# Add plugin for local development
-cordova plugin add cordova-hot-code-push-local-dev-addon
-# Install Cordova Hot Code Push CLI client:
-npm install -g cordova-hot-code-push-cli
-# Start local server by executing:
-cordova-hcp server
-```
-
-### 构建
-
-```bash
-npm run build --prod
-cordova-hcp build
-```
-
-> 注意: 需要对 www/chcp.json 进行稍许更改，模板可以参考 version_update/chcp.json
-
-修改完成后，将整个 `www` 内的内容上传至服务器  
-参考
-
-- https://github.com/pengkobe/reading-notes/issues/352
+see: [version-update](./doc/version-update.md)
 
 ## 远程推送
 
@@ -121,95 +80,11 @@ npm install --save @jiguang-ionic/jpush
 
 ## Native
 
-### ionic-native
-
-```json
-{
-  "@ionic-native/background-mode": "^4.3.1",
-  "@ionic-native/camera": "^4.3.1",
-  "@ionic-native/core": "^4.4.0",
-  "@ionic-native/file": "^4.2.0",
-  "@ionic-native/file-opener": "^4.4.2",
-  "@ionic-native/file-transfer": "^4.1.0",
-  "@ionic-native/insomnia": "^4.3.3",
-  "@ionic-native/local-notifications": "^4.7.0",
-  "@ionic-native/media": "^4.0.1",
-  "@ionic-native/network": "^4.4.2",
-  "@ionic-native/qr-scanner": "^4.5.2",
-  "@ionic-native/splash-screen": "^4.4.0",
-  "@ionic-native/status-bar": "^4.4.0",
-  "@ionic-native/vibration": "^4.5.2",
-  "@ionic/storage": "^2.1.3",
-  "@jiguang-ionic/jpush": "^1.0.2"
-}
-```
-
-### cordova-plugin
-
-```json
-{
-  "cordova-plugin-device": {},
-  "cordova-plugin-splashscreen": {},
-  "cordova-plugin-statusbar": {},
-  "cordova-plugin-whitelist": {},
-  "ionic-plugin-keyboard": {},
-  "cordova-plugin-file": {},
-  "cordova-plugin-media": {
-    "MICROPHONE_USAGE_DESCRIPTION": " "
-  },
-  "cordova-plugin-screen-locker": {},
-  "cordova-plugin-screenshot": {},
-  "cordova-plugin-app-event": {},
-  "cordova-plugin-app-version": {},
-  "cordova-plugin-background-mode": {},
-  "cordova-plugin-baidumaplocation": {
-    "ANDROID_KEY": "",
-    "IOS_KEY": "",
-    "IOS_LOCATION_DESC": ""
-  },
-  "cordova-plugin-camera": {
-    "CAMERA_USAGE_DESCRIPTION": " ",
-    "PHOTOLIBRARY_USAGE_DESCRIPTION": " "
-  },
-  "cordova-plugin-datepicker": {},
-  "cordova-plugin-file-opener2": {},
-  "cordova-plugin-file-transfer": {},
-  "cordova-plugin-network-information": {},
-  "cordova-plugin-pause-resume-download": {},
-  "cordova-plugin-screen-orientation": {},
-  "cordova-plugin-vibration": {},
-  "cordova-plugin-wechat": {
-    "WECHATAPPID": ""
-  },
-  "de.appplant.cordova.plugin.local-notification": {},
-  "es6-promise-plugin": {},
-  "talkingdata": {},
-  "cordova-plugin-logtofile": {},
-  "cordova-plugin-insomnia": {},
-  "com.unarin.cordova.beacon": {},
-  "phonegap-nfc": {},
-  "cordova-plugin-qrscanner": {},
-  "TalkingData": {},
-  "cordova-hot-code-push-plugin": {},
-  "cordova-android-support-gradle-release": {},
-  "cordova-sqlite-storage": {},
-  "jpush-phonegap-plugin": {
-    "APP_KEY": ""
-  }
-}
-```
-
-### 社交分享
-
-cordova-plugin-wechat
-
-### 定位
-
-cordova-plugin-baidumaplocation
+see: [cordova-plugin](./doc/cordova-plugin.md)
 
 ### 国际化
 
-ngx-translate, see：https://github.com/ngx-translate/core
+基于 ngx-translate, see：https://github.com/ngx-translate/core
 
 版本需要与 angular 对应的版本相匹配
 
@@ -217,6 +92,12 @@ ngx-translate, see：https://github.com/ngx-translate/core
 npm install @ngx-translate/core@9.1.1 --save
 npm install @ngx-translate/http-loader@2.0.1 --save
 ```
+
+## 用户行为
+
+### TalkingData
+
+### 极光
 
 ## refer
 
