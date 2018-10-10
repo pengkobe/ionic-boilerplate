@@ -9,6 +9,7 @@ see:https://github.com/pengkobe/reading-notes/issues/420
 - 开发流程与规范, see [README-dev-spec](./README-dev-spec.md)
 - 运行环境介绍 √
 - 代码规范 √
+- 测试[单元测试/端到端测试] √
 - 远程推送 √
 - 版本更新( apk ) √
 - 代码热更新 √
@@ -29,6 +30,7 @@ see:https://github.com/pengkobe/reading-notes/issues/420
 - 用户行为
 - http
 - 本地存储
+- 钩子( hooks )
 - 技巧工具( vscode、谷歌控制台等 )
 
 ## 监控
