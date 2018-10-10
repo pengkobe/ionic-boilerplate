@@ -8,6 +8,8 @@ import { File } from '@ionic-native/file';
 import { Insomnia } from '@ionic-native/insomnia';
 import { Network } from '@ionic-native/network';
 import { BackgroundMode } from '@ionic-native/background-mode';
+import { StatusBar } from '@ionic-native/status-bar';
+import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { CoreModule } from '../core/core.module';
 import { SharedModule } from '../shared/shared.module';
@@ -16,8 +18,8 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 
-import { StatusBar } from '@ionic-native/status-bar';
-import { SplashScreen } from '@ionic-native/splash-screen';
+// import { RavenErrorHandler } from './raven-error-handler.';
+
 
 @NgModule({
   declarations: [
@@ -47,6 +49,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     Insomnia,
     Network,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
+    // { provide: ErrorHandler, useClass: RavenErrorHandler } 
   ]
 })
 export class AppModule {}

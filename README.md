@@ -23,14 +23,14 @@ see:https://github.com/pengkobe/reading-notes/issues/420
 - 支持本地通知与远程通知 √
 - 支持多语言[中/英] √
 - 服务 √
-- native √
+- Cordova 插件 √
   - 社交分享
   - 地理定位
 - 错误上报
 - 用户行为
 - http
-- 本地存储
-- 钩子( hooks )
+- 本地存储 √
+- 钩子( hooks ) √
 - 技巧工具( vscode、谷歌控制台等 )
 
 ## 运行环境介绍
@@ -78,7 +78,7 @@ cordova plugin add jpush-phonegap-plugin --variable APP_KEY=your_jpush_appkey
 npm install --save @jiguang-ionic/jpush
 ```
 
-## Native
+## Cordova 插件
 
 see: [cordova-plugin](./doc/cordova-plugin.md)
 
@@ -91,6 +91,22 @@ see: [cordova-plugin](./doc/cordova-plugin.md)
 ```bash
 npm install @ngx-translate/core@9.1.1 --save
 npm install @ngx-translate/http-loader@2.0.1 --save
+```
+
+## 钩子
+
+位于文件夹 `hooks` 下, 可以写各个声明周期的钩子
+
+## 本地存储
+
+尽量不使用 localstorage，系统清内存时会被整掉
+
+## 错误上报
+
+基于 raven-js
+
+```bash
+npm install raven-js --save
 ```
 
 ## 用户行为
