@@ -1,9 +1,8 @@
 /**
- * 原生服务
+ * 常用原生服务
  * 1. 网络状态
- * 2. 头像下载
- * 3. 文件下载
- * 4. 屏幕常亮
+ * 2. 文件下载
+ * 3. 屏幕常亮
  */
 
 import { Injectable } from '@angular/core';
@@ -108,7 +107,7 @@ export class NativeService {
   createToast() {
     this.toast = this.toastCtrl.create({
       message: '',
-      // duration: 3000,
+      duration: 3000,
       position: 'top',
       cssClass: 'my-toast-style',
       showCloseButton: true,

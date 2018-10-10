@@ -2,6 +2,7 @@ import { Subject, Observable } from 'rxjs';
 
 import { Injectable } from '@angular/core';
 import { Events } from 'ionic-angular';
+import { baseUrl, qiniuDomain } from '../config';
 
 const subject: Subject<any> = new Subject<any>();
 const tokenSubject: Subject<any> = new Subject<any>();
@@ -10,15 +11,13 @@ const settingSubject: Subject<any> = new Subject<any>();
 @Injectable()
 export class GlobalService {
   public notificationSubject: Subject<any> = new Subject<any>();
-  public qiniuDomain = '';
+  public serverAddress = baseUrl;
 
   private _isActive = false;
   private _isFirstTimeOpen: boolean;
   private _token: string;
   private _userinfo: any;
   private _jpushAlias: any;
-  private _countdown = 0;
-  private _resttime = 0;
   private _isAlwaysLight = false;
 
   constructor(public events: Events) {}
@@ -219,47 +218,4 @@ export class GlobalService {
     });
   }
 
-  get countdown() {
-    if (this._countdown !== 0) {
-      return this._countdown;
-    } else {
-      const countdownStr = localStorage.getItem('_countdown');
-      if (countdownStr) {
-        return parseInt(countdownStr, 10);
-      } else {
-        return 25;
-      }
-    }
-  }
-
-  set countdown(value: number) {
-    this._countdown = value;
-    localStorage.setItem('_countdown', value + '');
-    settingSubject.next({
-      countdown: this._countdown,
-      resttime: this._resttime,
-    });
-  }
-
-  get resttime() {
-    if (this._resttime !== 0) {
-      return this._resttime;
-    } else {
-      const restStr = localStorage.getItem('_resttime');
-      if (restStr) {
-        return parseInt(restStr, 10);
-      } else {
-        return 5;
-      }
-    }
-  }
-
-  set resttime(value: number) {
-    this._resttime = value;
-    localStorage.setItem('_resttime', value + '');
-    settingSubject.next({
-      countdown: this._countdown,
-      resttime: this._resttime,
-    });
-  }
 }

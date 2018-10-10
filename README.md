@@ -18,7 +18,7 @@ see:https://github.com/pengkobe/reading-notes/issues/420
 - Angular 最佳实践自动检测
 - 定义好目录结构
 - 支持本地通知与远程通知
-- 支持多语言
+- 支持多语言[中/英]
 - 服务
 - 错误上报
 - 用户行为
@@ -121,6 +121,17 @@ npm install --save @jiguang-ionic/jpush
     "APP_KEY": ""
   }
 }
+```
+
+### 国际化
+
+ngx-translate, see：https://github.com/ngx-translate/core
+
+版本需要与 angular 对应的版本相匹配
+
+```bash
+npm install @ngx-translate/core@9.1.1 --save
+npm install @ngx-translate/http-loader@2.0.1 --save
 ```
 
 ## refer

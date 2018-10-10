@@ -2,27 +2,31 @@
   "compilerOptions": {
     "allowSyntheticDefaultImports": true,
     "declaration": false,
+    "skipLibCheck": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "lib": [
-      "dom",
-      "es2015"
-    ],
+    "lib": ["dom", "es2015"],
     "module": "es2015",
     "moduleResolution": "node",
     "sourceMap": true,
-    "target": "es5"
+    "target": "es5",
+    "baseUrl": "./",
+    "paths": {
+      "@app/env": ["src/environments/environment"],
+      "@components/*": ["src/components/*"],
+      "@providers/*": ["src/providers/*"],
+      "@modals/*": ["src/modals/*"],
+      "@directives/*": ["src/directives/*"],
+      "@pipes/*": ["src/pipes/*"],
+      "@app/*": ["src/app/*"],
+      "@root/*": ["./*"]
+    }
   },
-  "include": [
-    "src/**/*.ts"
-  ],
-  "exclude": [
-    "node_modules",
-    "src/**/*.spec.ts",
-    "src/**/__tests__/*.ts"
-  ],
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules", "src/**/*.spec.ts"],
   "compileOnSave": false,
   "atom": {
     "rewriteTsconfig": false
   }
 }
+
