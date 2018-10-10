@@ -6,4 +6,4 @@ export const baseUrl = ENV.serverUrl;
 
 export const chatSocketUrl = ENV.serverUrl + 'chat';
 export const tomatoSocketUrl = ENV.serverUrl + 'tomatobang';
-export const qiniuDomain ='';
+export const qiniuDomain = '';

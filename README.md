@@ -6,7 +6,7 @@ with test tool &amp;&amp; push service &amp;&amp; update service &amp;&amp; code
 
 see:https://github.com/pengkobe/reading-notes/issues/420
 
-- 代码规范
+- 代码规范 √
 - 远程推送 √
 - 版本更新( apk )  √
 - 代码热更新  √
@@ -25,6 +25,11 @@ see:https://github.com/pengkobe/reading-notes/issues/420
 - http
 - 本地存储( cache/disk ) 
 - native 
+- 技巧工具( vscode、谷歌控制台等 )
+
+## 代码规范
+* JavaScript 代码规范, 参见业界公认的 airbnb 规范: https://github.com/airbnb/javascript 
+* Angular 规范，直接参考官网: https://angular.io/guide/styleguide , 默认已集成部分检测工具， 如 `tslint-angular`，手动检测可以执行命令 `npm run lint`
 
 ## 代码热更新
 
