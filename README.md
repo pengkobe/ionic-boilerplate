@@ -126,6 +126,6 @@ npm install raven-js --save
 - 官网：https://www.talkingdata.com/
 - 集成文档: http://doc.talkingdata.com/posts/143
 
-## refer
+## 参考
 
 https://github.com/marcoturi/ionic-boilerplate
