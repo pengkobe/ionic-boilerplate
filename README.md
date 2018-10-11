@@ -130,7 +130,8 @@ npm install raven-js --save
 
 ### VSCODE
 
-推荐使用 VSCODE 作为开发工具，完善的生态，靠谱的开发团队，对 typescript 还极其友好
+推荐使用 VSCODE 作为开发工具，完善的生态，靠谱的开发团队，对 typescript 还极其友好  
+
 
 ### 谷歌控制台
 

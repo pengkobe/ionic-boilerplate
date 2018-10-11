@@ -5,6 +5,7 @@
   "homepage": "https://github.com/pengkobe/ionic-boilerplate",
   "private": true,
   "scripts": {
+    "dev": "bnr dev",
     "start": "ionic-app-scripts serve",
     "clean": "ionic-app-scripts clean",
     "build": "ionic-app-scripts build",
@@ -19,6 +20,15 @@
     "e2e-update-local": "./node_modules/protractor/bin/webdriver-manager update",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -w -r 0",
     "commitmsg": "validate-commit-msg"
+  },
+  "betterScripts": {
+    "dev": {
+      "command": "ionic-app-scripts serve",
+      "env": {
+        "NODE_ENV": "development",
+        "PLATFORM": "web"
+      }
+    }
   },
   "config": {
     "ionic_webpack": "./config/webpack.config.js",
@@ -72,6 +82,7 @@
     "@types/jasmine": "^2.5.41",
     "@types/node": "^7.0.8",
     "angular2-template-loader": "^0.6.2",
+    "better-npm-run": "^0.1.1",
     "codelyzer": "^4.5.0",
     "cz-conventional-changelog": "^2.1.0",
     "html-loader": "^0.4.5",

@@ -89,15 +89,15 @@ see: https://github.com/mgechev/codelyzer
 npm i tslint-angular
 ```
 
-### ionic docker
+### ionic docker (TODO)
 
 see: https://github.com/marcoturi/ionic-docker
 
-### type doc
+### type doc (TODO)
 
 自动根据注释生成文档的工具， see: https://github.com/TypeStrong/typedoc/
 
-### better-npm-run
+### better-npm-run (TODO)
 
 能够去除配置文件硬编码
 see: https://github.com/benoror/better-npm-run
