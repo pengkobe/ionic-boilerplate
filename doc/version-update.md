@@ -1,6 +1,7 @@
 # 版本更新
 
 ## APK 更新
+
 实现代码位于 `src/providers/update.service`
 
 ## 热更新

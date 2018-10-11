@@ -6,10 +6,13 @@ with test tool &amp;&amp; push service &amp;&amp; update service &amp;&amp; code
 
 see:https://github.com/pengkobe/reading-notes/issues/420
 
-- 开发流程与规范, see [README-dev-spec](./README-dev-spec.md)
+- 开发流程与代码规范, see [README-dev-spec](./doc/code-spec.md) √
+  - git
+  - 实用工具
+  - 持续集成
+  - 部署
 - 运行环境介绍 √
-- 代码规范 √
-- 测试[单元测试/端到端测试] √
+- 测试支持[单元测试/端到端测试] √
 - 远程推送 √
 - 版本更新( apk ) √
 - 代码热更新 √
@@ -34,11 +37,11 @@ see:https://github.com/pengkobe/reading-notes/issues/420
 - NGRX √
 - 技巧与工具( vscode、谷歌控制台等 )
 - 常用组件
-- 主题
+- 主题( 换肤 )
 
 ## 运行环境介绍
 
-本脚手架运行环境为:
+本脚手架运行环境为( base on command: `ionic info`):
 
 ```bash
 Ionic:
@@ -50,8 +53,8 @@ Ionic:
 Cordova:
 
    cordova (Cordova CLI) : not installed
-   Cordova Platforms     : not available
-   Cordova Plugins       : cordova-plugin-ionic-keyboard 2.1.3, cordova-plugin-ionic-webview 2.2.0, (and 28 other plugins)
+   Cordova Platforms     : android 6.4.0
+   Cordova Plugins       : no whitelisted plugins (0 plugins total)
 
 System:
 
@@ -97,6 +100,7 @@ npm install @ngx-translate/http-loader@2.0.1 --save
 ```
 
 ## NGRX
+
 see: https://github.com/ngrx
 
 ## 钩子
@@ -116,9 +120,11 @@ npm install raven-js --save
 ```
 
 ## 用户行为
+
 基于 TalkingData Cordova 插件进行开发，需要在官网下载最新库文件。
-* 官网：https://www.talkingdata.com/  
-* 集成文档: http://doc.talkingdata.com/posts/143  
+
+- 官网：https://www.talkingdata.com/
+- 集成文档: http://doc.talkingdata.com/posts/143
 
 ## refer
 
