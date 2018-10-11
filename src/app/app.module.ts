@@ -20,16 +20,12 @@ import { StoreModule } from '@ngrx/store';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
+import { TestPage } from '../pages/test/test';
 
 // import { RavenErrorHandler } from './raven-error-handler.';
 
-
 @NgModule({
-  declarations: [
-    MyApp,
-    HomePage,
-    ListPage
-  ],
+  declarations: [MyApp, HomePage, ListPage, TestPage],
   imports: [
     CoreModule,
     SharedModule,
@@ -39,11 +35,7 @@ import { ListPage } from '../pages/list/list';
     EffectsModule.forRoot([]),
   ],
   bootstrap: [IonicApp],
-  entryComponents: [
-    MyApp,
-    HomePage,
-    ListPage
-  ],
+  entryComponents: [MyApp, HomePage, ListPage, TestPage],
   providers: [
     StatusBar,
     SplashScreen,
@@ -53,8 +45,8 @@ import { ListPage } from '../pages/list/list';
     FileOpener,
     Insomnia,
     Network,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
-    // { provide: ErrorHandler, useClass: RavenErrorHandler } 
-  ]
+    { provide: ErrorHandler, useClass: IonicErrorHandler },
+    // { provide: ErrorHandler, useClass: RavenErrorHandler }
+  ],
 })
 export class AppModule {}

@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { App, Platform, IonicApp, Nav, ToastController } from 'ionic-angular';
+import { App, Platform, IonicApp, Nav, ToastController, Events } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
@@ -9,12 +9,14 @@ import { NativeService } from '@providers/native.service';
 
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
+import { TestPage } from '../pages/test/test';
 
 @Component({
   templateUrl: 'app.html',
 })
 export class MyApp {
   backButtonPressed = false;
+  hideNav = false;
 
   @ViewChild(Nav)
   nav: Nav;
@@ -26,6 +28,7 @@ export class MyApp {
   constructor(
     public app: App,
     public platform: Platform,
+    public events: Events,
     public statusBar: StatusBar,
     public splashScreen: SplashScreen,
     public global: GlobalService,
@@ -40,6 +43,7 @@ export class MyApp {
     this.pages = [
       { title: 'Home', component: HomePage },
       { title: 'List', component: ListPage },
+      { title: 'test', component: TestPage },
     ];
   }
 
@@ -54,6 +58,13 @@ export class MyApp {
       this.native.initNativeService();
 
       this.registerBackButtonAction();
+    });
+
+    this.events.subscribe('qrScanner:show', () => {
+      this.hideNav = true;
+    });
+    this.events.subscribe('qrScanner:hide', () => {
+      this.hideNav = false;
     });
   }
 
