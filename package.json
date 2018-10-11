@@ -2,7 +2,7 @@
   "name": "ionic-boilerplate",
   "version": "0.0.2",
   "author": "pengkobe",
-  "homepage": "http://ionicframework.com/",
+  "homepage": "https://github.com/pengkobe/ionic-boilerplate",
   "private": true,
   "scripts": {
     "start": "ionic-app-scripts serve",
@@ -17,7 +17,8 @@
     "e2e-test": "protractor ./test-config/protractor.conf.js",
     "e2e-update": "webdriver-manager update --standalone false --gecko false",
     "e2e-update-local": "./node_modules/protractor/bin/webdriver-manager update",
-    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -w -r 0"
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -w -r 0",
+    "commitmsg": "validate-commit-msg"
   },
   "config": {
     "ionic_webpack": "./config/webpack.config.js",

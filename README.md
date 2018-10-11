@@ -4,7 +4,7 @@ with test tool &amp;&amp; push service &amp;&amp; update service &amp;&amp; code
 
 ## 支持项
 
-see:https://github.com/pengkobe/reading-notes/issues/420
+> 部分参考自: https://github.com/pengkobe/reading-notes/issues/420
 
 - 开发流程与代码规范, see [README-dev-spec](./doc/code-spec.md) √
   - git
@@ -35,7 +35,7 @@ see:https://github.com/pengkobe/reading-notes/issues/420
 - 本地存储 √
 - 钩子( hooks ) √
 - NGRX √
-- 技巧与工具( vscode、谷歌控制台等 )
+- 技巧与工具( VSCODE、谷歌控制台等 )
 - 常用组件
 - 主题( 换肤 )
 
@@ -88,7 +88,7 @@ npm install --save @jiguang-ionic/jpush
 
 see: [cordova-plugin](./doc/cordova-plugin.md)
 
-### 国际化
+## 国际化
 
 基于 ngx-translate, see：https://github.com/ngx-translate/core
 
@@ -125,6 +125,27 @@ npm install raven-js --save
 
 - 官网：https://www.talkingdata.com/
 - 集成文档: http://doc.talkingdata.com/posts/143
+
+## 技巧与工具( VSCODE、谷歌控制台等 )
+
+### VSCODE
+
+推荐使用 VSCODE 作为开发工具，完善的生态，靠谱的开发团队，对 typescript 还极其友好
+
+### 谷歌控制台
+
+使用谷歌控制台在开发时进行调试，只需要按下 F12, 选择对应的移动视图就 ok， 若需要对真机进行调试时，也可以直接使用谷歌 `chorome://inspect` 进行同步调试，之前微信跳一跳游戏自动点击小工具也是基于这样一个原理。
+
+## 常用组件
+
+这里提供的常用组件有这些( 更多则待开发 )
+
+- 二维码扫描
+
+## 换肤
+
+一个高大上的 App 肯定少不了换肤功能，但是 Ionic 已经足够好，已经帮我们实现大部分了，具体实现可以参考:  
+https://ionicframework.com/docs/theming/
 
 ## 参考
 

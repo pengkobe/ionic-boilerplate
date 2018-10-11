@@ -14,6 +14,12 @@
 
 > 参见教程: http://www.ruanyifeng.com/blog/2016/01/commit_message_change_log.html
 
+```bash
+git add YOUR_EDITED_FILES
+git cz
+git push
+```
+
 #### 安装 commitizen
 
 commitizen, 可以实现提交提示可视化， see: https://github.com/commitizen/cz-cli  
@@ -34,15 +40,6 @@ chore：构建过程或辅助工具的变动
  commitizen init cz-conventional-changelog --save --save-exact
 ```
 
-#### 安装 validate-commit-msg
-
-基于这个工具可以验证提交消息的格式是否规范, 阮博士教程中安装方式有点过时，具体使用可以
-see: https://github.com/conventional-changelog-archived-repos/validate-commit-msg
-
-```bash
-npm install --save-dev validate-commit-msg
-```
-
 添加 [`.vcmrc`](../.vcmrc)
 
 #### 安装 conventional-changelog
@@ -58,6 +55,19 @@ npm install -g conventional-changelog
 
 ```bash
 npm run changelog
+```
+
+#### commitlint
+
+https://github.com/marionebl/commitlint
+
+#### 安装 validate-commit-msg（ DEPRECATED 使用 commitlint 即可）
+
+基于这个工具可以验证提交消息的格式是否规范, 阮博士教程中安装方式有点过时，具体使用可以
+see: https://github.com/conventional-changelog-archived-repos/validate-commit-msg
+
+```bash
+npm install --save-dev validate-commit-msg
 ```
 
 ## 代码规范
