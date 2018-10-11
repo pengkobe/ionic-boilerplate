@@ -11,6 +11,8 @@ module.exports = {
         'chore',
         'feat',
         'fix',
+        'build',
+        'ci',
         'merge',
         'perf',
         'refactor',

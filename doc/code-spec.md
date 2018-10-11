@@ -42,27 +42,12 @@ chore：构建过程或辅助工具的变动
 
 添加 [`.vcmrc`](../.vcmrc)
 
-#### 安装 conventional-changelog
-
-基于这个工具可以自动生成 changelog , 前提是得按照标准的格式书写 commit message  
-see: https://github.com/conventional-changelog/conventional-changelog
-
-```bash
-npm install -g conventional-changelog
-```
-
-在本脚手架中，可以直接使用 npm 命令执行
-
-```bash
-npm run changelog
-```
-
 #### 安装 standard-version
 
 主要用于生成 changelog
 see: https://github.com/conventional-changelog/standard-version
 
-#### commitlint
+#### 安装 commitlint
 
 https://github.com/marionebl/commitlint
 
@@ -88,6 +73,21 @@ see: https://github.com/conventional-changelog-archived-repos/validate-commit-ms
 npm install --save-dev validate-commit-msg
 ```
 
+#### 安装 conventional-changelog（ DEPRECATED 使用 standard-version 即可）
+
+基于这个工具可以自动生成 changelog , 前提是得按照标准的格式书写 commit message  
+see: https://github.com/conventional-changelog/conventional-changelog
+
+```bash
+npm install -g conventional-changelog
+```
+
+在本脚手架中，可以直接使用 npm 命令执行
+
+```bash
+npm run changelog
+```
+
 ## 代码规范
 
 ### 业界参考
@@ -111,21 +111,21 @@ see: https://github.com/mgechev/codelyzer
 npm i tslint-angular
 ```
 
-### ionic docker (TODO)
-
-see: https://github.com/marcoturi/ionic-docker
-
-### type doc (TODO)
-
-自动根据注释生成文档的工具， see: https://github.com/TypeStrong/typedoc/
-
-### better-npm-run (TODO)
-
-能够去除配置文件硬编码
-see: https://github.com/benoror/better-npm-run
-
 ### husky
 
 > usky can prevent bad git commit, git push and more
 
 https://www.npmjs.com/package/husky
+
+### type doc
+
+自动根据注释生成文档的工具，前提是你自己得写好注释 see: https://github.com/TypeStrong/typedoc/
+
+### ionic docker (TODO)
+
+see: https://github.com/marcoturi/ionic-docker
+
+### better-npm-run (TODO)
+
+能够去除配置文件硬编码
+see: https://github.com/benoror/better-npm-run
