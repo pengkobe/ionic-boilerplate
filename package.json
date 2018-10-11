@@ -37,6 +37,12 @@
       "path": "./node_modules/cz-conventional-changelog"
     }
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm test",
+      "pre-push": "npm test"
+    }
+  },
   "dependencies": {
     "@angular/animations": "5.2.11",
     "@angular/common": "5.2.11",
@@ -86,6 +92,7 @@
     "codelyzer": "^4.5.0",
     "cz-conventional-changelog": "^2.1.0",
     "html-loader": "^0.4.5",
+    "husky": "^1.1.2",
     "ionic": "3.20.0",
     "istanbul-instrumenter-loader": "^3.0.0",
     "jasmine": "^2.5.3",

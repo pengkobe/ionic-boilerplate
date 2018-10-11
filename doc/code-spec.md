@@ -81,6 +81,10 @@ npm install --save-dev validate-commit-msg
 
 这里囊括一些已经用到或者以后需要用到的一些工具
 
+### scsslint
+
+https://sass-guidelin.es/#tools
+
 ### codelyzer
 
 see: https://github.com/mgechev/codelyzer
@@ -102,6 +106,8 @@ see: https://github.com/marcoturi/ionic-docker
 能够去除配置文件硬编码
 see: https://github.com/benoror/better-npm-run
 
-### scsslint
+### husky
 
-https://sass-guidelin.es/#tools
+> usky can prevent bad git commit, git push and more
+
+https://www.npmjs.com/package/husky
