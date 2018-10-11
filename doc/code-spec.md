@@ -57,6 +57,11 @@ npm install -g conventional-changelog
 npm run changelog
 ```
 
+#### 安装 standard-version
+
+主要用于生成 changelog
+see: https://github.com/conventional-changelog/standard-version
+
 #### commitlint
 
 https://github.com/marionebl/commitlint
