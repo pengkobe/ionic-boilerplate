@@ -34,6 +34,7 @@ see:https://github.com/pengkobe/reading-notes/issues/420
 - NGRX
 - 技巧与工具( vscode、谷歌控制台等 )
 - 常用组件
+- 主题
 
 ## 运行环境介绍
 
