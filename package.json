@@ -19,7 +19,7 @@
     "e2e-update": "webdriver-manager update --standalone false --gecko false",
     "e2e-update-local": "./node_modules/protractor/bin/webdriver-manager update",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -w -r 0",
-    "commitmsg": "validate-commit-msg"
+    "commitmsg": "commitlint -e"
   },
   "betterScripts": {
     "dev": {
@@ -39,8 +39,8 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm test",
-      "pre-push": "npm test"
+      "pre-push": "npm run test-ci",
+      "commit-msg": "commitlint -e"
     }
   },
   "dependencies": {
@@ -84,6 +84,8 @@
   },
   "devDependencies": {
     "@angular/cli": "1.5.5",
+    "@commitlint/cli": "^7.2.0",
+    "@commitlint/config-angular": "^7.1.2",
     "@ionic/app-scripts": "3.1.11",
     "@types/jasmine": "^2.5.41",
     "@types/node": "^7.0.8",
@@ -110,8 +112,7 @@
     "ts-node": "^3.0.2",
     "tslint": "^5.9.1",
     "tslint-angular": "^1.1.2",
-    "typescript": "~2.6.2",
-    "validate-commit-msg": "^2.14.0"
+    "typescript": "~2.6.2"
   },
   "description": "An Ionic project",
   "cordova": {

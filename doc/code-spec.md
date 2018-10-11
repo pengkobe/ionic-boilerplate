@@ -61,6 +61,19 @@ npm run changelog
 
 https://github.com/marionebl/commitlint
 
+安装
+
+```bash
+# Install commitlint cli and conventional config
+npm install --save-dev @commitlint/{config-angular,cli}
+# For Windows:
+npm install --save-dev @commitlint/config-angular @commitlint/cli
+echo "module.exports = {extends: ['@commitlint/config-angular']};" > commitlint.config.js
+```
+
+本脚手架使用 angular 规则， 详情参见:  
+https://github.com/marionebl/commitlint/tree/master/@commitlint/config-angular
+
 #### 安装 validate-commit-msg（ DEPRECATED 使用 commitlint 即可）
 
 基于这个工具可以验证提交消息的格式是否规范, 阮博士教程中安装方式有点过时，具体使用可以
