@@ -1,7 +1,8 @@
 import { Component, Output, EventEmitter } from '@angular/core';
 import { NavController, NavParams, ModalController } from 'ionic-angular';
 import lodash from 'lodash';
-
+import { Insomnia } from '@ionic-native/insomnia';
+import { GlobalService } from '@providers/global.service';
 /**
  * Generated class for the TestPage page.
  *
@@ -14,6 +15,10 @@ import lodash from 'lodash';
   templateUrl: 'test.html',
 })
 export class TestPage {
+  isAlwaysLight = false;
+
+  languageType: string;
+
   @Output()
   successScaned: EventEmitter<any> = new EventEmitter();
   @Output()
@@ -22,6 +27,8 @@ export class TestPage {
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
+    private insomnia: Insomnia,
+    public globalservice: GlobalService,
     public modalCtrl: ModalController
   ) {}
 
@@ -49,5 +56,34 @@ export class TestPage {
     } else {
       this.wrongScaned.emit();
     }
+  }
+
+  /**
+   * 设置屏幕常亮状态
+   */
+  changeLightState() {
+    if (this.isAlwaysLight) {
+      this.globalservice.isAlwaysLight = true;
+      this.insomnia.keepAwake().then(
+        () => {},
+        e => {
+          this.globalservice.isAlwaysLight = false;
+          console.log('error', e);
+        }
+      );
+    } else {
+      this.globalservice.isAlwaysLight = false;
+      this.insomnia.allowSleepAgain().then(
+        () => {},
+        e => {
+          this.globalservice.isAlwaysLight = true;
+          console.log('error', e);
+        }
+      );
+    }
+  }
+
+  setLanguageType(){
+    
   }
 }
