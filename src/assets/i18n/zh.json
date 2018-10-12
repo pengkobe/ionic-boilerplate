@@ -1,8 +1,8 @@
 {
   "HOME": {
-    "IndexPage": "首页",
-    "Message": "消息",
-    "Discover": "发现",
+    "Home": "首页",
+    "List": "列表",
+    "Test": "测试",
     "Me": "我"
   }
 }

@@ -1,8 +1,8 @@
 {
   "HOME": {
-    "IndexPage": "index",
-    "Message": "Message",
-    "Discover": "Discover",
+    "Home": "Home",
+    "List": "List",
+    "Test": "Test",
     "Me": "Me"
   }
 }

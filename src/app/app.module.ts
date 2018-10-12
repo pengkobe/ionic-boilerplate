@@ -22,11 +22,12 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { TestPage } from '../pages/test/test';
+import { TabsPage } from '../pages/tabs/tabs';
 
 // import { RavenErrorHandler } from './raven-error-handler.';
 
 @NgModule({
-  declarations: [MyApp, HomePage, ListPage, TestPage],
+  declarations: [MyApp, HomePage, ListPage, TestPage, TabsPage],
   imports: [
     CoreModule,
     SharedModule,
@@ -37,7 +38,7 @@ import { TestPage } from '../pages/test/test';
     EffectsModule.forRoot([]),
   ],
   bootstrap: [IonicApp],
-  entryComponents: [MyApp, HomePage, ListPage, TestPage],
+  entryComponents: [MyApp, HomePage, ListPage, TestPage ,TabsPage],
   providers: [
     StatusBar,
     SplashScreen,
