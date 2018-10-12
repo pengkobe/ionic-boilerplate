@@ -40,7 +40,6 @@
   },
   "husky": {
     "hooks": {
-      "pre-push": "npm run test-ci",
       "commit-msg": "commitlint -e"
     }
   },

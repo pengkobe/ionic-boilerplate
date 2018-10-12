@@ -6,10 +6,10 @@ with test tool &amp;&amp; push service &amp;&amp; update service &amp;&amp; code
 
 > 部分参考自: https://github.com/pengkobe/reading-notes/issues/420
 
-- 开发流程与代码规范, see [README-dev-spec](./doc/code-spec.md) √
-  - git
-  - 实用工具
-  - 持续集成
+- 开发流程与代码规范, see [README-dev-spec](./doc/code-spec.md)
+  - git √
+  - 实用工具 √
+  - 持续集成 √
   - 部署
 - 运行环境介绍 √
 - 测试支持[单元测试/端到端测试] √
@@ -26,18 +26,18 @@ with test tool &amp;&amp; push service &amp;&amp; update service &amp;&amp; code
 - 支持本地通知与远程通知 √
 - 支持多语言[中/英] √
 - 服务 √
-- Cordova 插件 √
+- Cordova 插件
   - 社交分享 ×
   - 地理定位 √
 - 错误上报 √
-- 用户行为 √
 - http √
 - 本地存储 √
 - 钩子( hooks ) √
 - NGRX √
 - 技巧与工具( VSCODE、谷歌控制台等 )
+- 主题( 换肤 ) √
 - 常用组件
-- 主题( 换肤 )
+- 用户行为
 
 ## 运行环境介绍
 
@@ -150,6 +150,15 @@ https://ionicframework.com/docs/theming/
 ## 参考
 
 https://github.com/marcoturi/ionic-boilerplate
+
+## TODO
+
+[] 中英文切换示例  
+[] cordova 插件能力示例  
+[] 文档完善  
+[] 部署  
+[] 用户行为统计示例  
+[] 常用组件完善  
 
 ## License
 
