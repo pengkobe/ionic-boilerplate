@@ -2,6 +2,16 @@
 
 with test tool &amp;&amp; push service &amp;&amp; update service &amp;&amp; code lint &amp;&amp; ...
 
+## 使用
+
+```bash
+git clone https://github.com/pengkobe/ionic-boilerplate
+cd ionic-boilerplate
+npm install
+npm install -g commitizen
+commitizen init cz-conventional-changelog --save --save-exact
+```
+
 ## 支持项
 
 > 部分参考自: https://github.com/pengkobe/reading-notes/issues/420
@@ -20,7 +30,7 @@ with test tool &amp;&amp; push service &amp;&amp; update service &amp;&amp; code
 - 目录结构支持从项目主目录相对定位 √
 - 覆盖 ionic cli 默认配置 √
 - tslint 与 scsslint √
-- 去除开机白屏 √
+- 去除开机白屏等待 √
 - Angular 最佳实践自动检测 √
 - 定义好目录结构 √
 - 支持本地通知与远程通知 √
@@ -54,7 +64,6 @@ Cordova:
 
    cordova (Cordova CLI) : not installed
    Cordova Platforms     : android 6.4.0
-   Cordova Plugins       : no whitelisted plugins (0 plugins total)
 
 System:
 
@@ -69,23 +78,17 @@ System:
 
 ## 代码规范
 
+代码规范与常见工具说明  
 see: [code-spec](./doc/code-spec.md)
 
 ## 版本更新
 
+支持 APK 版本更新与线上代码热更新  
 see: [version-update](./doc/version-update.md)
-
-## 远程推送
-
-jpush-phonegap-plugin, see: https://github.com/jpush/jpush-phonegap-plugin
-
-```bash
-cordova plugin add jpush-phonegap-plugin --variable APP_KEY=your_jpush_appkey
-npm install --save @jiguang-ionic/jpush
-```
 
 ## Cordova 插件
 
+脚手架使用到的 Cordova 插件列表
 see: [cordova-plugin](./doc/cordova-plugin.md)
 
 ## 国际化
@@ -101,19 +104,25 @@ npm install @ngx-translate/http-loader@2.0.1 --save
 
 ## NGRX
 
+脚手架已集成 NGRX  
 see: https://github.com/ngrx
 
 ## 钩子
 
-位于文件夹 `hooks` 下, 可以写各个声明周期的钩子
+位于文件夹 `hooks` 下, 可以写各个声明周期的钩子，目前包含的钩子有
+
+- 020_remove_sass_from_platforms, 删除不必要的 sass 文件
+- 010_update_config, 根据 package.json 中的版本号更新 config.xml
+- 010_init_directories, 用于创建 plugins 与 platforms 文件夹
 
 ## 本地存储
 
-尽量不使用 localstorage，系统清内存时会被整掉
+使用 `@ionic/storage`，尽量不使用 localstorage，系统清内存时会被删掉
 
 ## 错误上报
 
-基于 raven-js
+基于 raven-js 上报错误信息至第三方平台。  
+文档地址：https://docs.sentry.io/clients/javascript/
 
 ```bash
 npm install raven-js --save
@@ -121,24 +130,18 @@ npm install raven-js --save
 
 ## 用户行为
 
-基于 TalkingData Cordova 插件进行开发，需要在官网下载最新库文件。
+基于 TalkingData 进行统计，Github 上有相应 Cordova 插件，需要在官网下载最新库文件，手动进行集成
 
 - 官网：https://www.talkingdata.com/
 - 集成文档: http://doc.talkingdata.com/posts/143
 
 ## 技巧与工具( VSCODE、谷歌控制台等 )
 
-### VSCODE
-
-推荐使用 VSCODE 作为开发工具，完善的生态，靠谱的开发团队，对 typescript 还极其友好
-
-### 谷歌控制台
-
-使用谷歌控制台在开发时进行调试，只需要按下 F12, 选择对应的移动视图就 ok， 若需要对真机进行调试时，也可以直接使用谷歌 `chorome://inspect` 进行同步调试，之前微信跳一跳游戏自动点击小工具也是基于这样一个原理。
+see: [tools](./doc/tools.md)
 
 ## 常用组件
 
-这里提供的常用组件有这些( 更多则待开发 )
+这里提供的常用组件有这些( 更多待开发 )
 
 - 二维码扫描
 
@@ -153,12 +156,12 @@ https://github.com/marcoturi/ionic-boilerplate
 
 ## TODO
 
-[] 中英文切换示例  
+[x] 中英文切换示例  
 [] cordova 插件能力示例  
 [] 文档完善  
 [] 部署  
 [] 用户行为统计示例  
-[] 常用组件完善  
+[] 常用组件完善
 
 ## License
 

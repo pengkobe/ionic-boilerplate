@@ -18,7 +18,7 @@ export class TestPage {
   isAlwaysLight = false;
 
   languageType: string;
-
+  
   @Output()
   successScaned: EventEmitter<any> = new EventEmitter();
   @Output()

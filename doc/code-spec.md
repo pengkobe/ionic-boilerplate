@@ -33,6 +33,7 @@ style： 格式（ 不影响代码运行的变动 ）
 refactor：重构（ 即不是新增功能，也不是修改bug的代码变动 ）
 test：增加测试
 chore：构建过程或辅助工具的变动
+build: 与构建工具相关的更改
 ```
 
 ```bash
@@ -40,53 +41,18 @@ chore：构建过程或辅助工具的变动
  commitizen init cz-conventional-changelog --save --save-exact
 ```
 
-添加 [`.vcmrc`](../.vcmrc)
+#### standard-version
 
-#### 安装 standard-version
-
-主要用于生成 changelog
+使用 standard-version 生成 changelog
 see: https://github.com/conventional-changelog/standard-version
 
-#### 安装 commitlint
+#### commitlint
 
-https://github.com/marionebl/commitlint
-
-安装
-
-```bash
-# Install commitlint cli and conventional config
-npm install --save-dev @commitlint/{config-angular,cli}
-# For Windows:
-npm install --save-dev @commitlint/config-angular @commitlint/cli
-echo "module.exports = {extends: ['@commitlint/config-angular']};" > commitlint.config.js
-```
+基于 commitlint 验证 git message 是否规范  
+see: https://github.com/marionebl/commitlint
 
 本脚手架使用 angular 规则， 详情参见:  
 https://github.com/marionebl/commitlint/tree/master/@commitlint/config-angular
-
-#### 安装 validate-commit-msg（ DEPRECATED 使用 commitlint 即可）
-
-基于这个工具可以验证提交消息的格式是否规范, 阮博士教程中安装方式有点过时，具体使用可以
-see: https://github.com/conventional-changelog-archived-repos/validate-commit-msg
-
-```bash
-npm install --save-dev validate-commit-msg
-```
-
-#### 安装 conventional-changelog（ DEPRECATED 使用 standard-version 即可）
-
-基于这个工具可以自动生成 changelog , 前提是得按照标准的格式书写 commit message  
-see: https://github.com/conventional-changelog/conventional-changelog
-
-```bash
-npm install -g conventional-changelog
-```
-
-在本脚手架中，可以直接使用 npm 命令执行
-
-```bash
-npm run changelog
-```
 
 ## 代码规范
 
@@ -95,16 +61,18 @@ npm run changelog
 - JavaScript 代码规范, 参见业界公认的 airbnb 规范: https://github.com/airbnb/javascript
 - Angular 规范，直接参考官网: https://angular.io/guide/styleguide , 默认已集成部分检测工具， 如 `tslint-angular`，手动检测可以执行命令 `npm run lint`
 
-### 工具
+## 工具
 
 这里囊括一些已经用到或者以后需要用到的一些工具
 
 ### scsslint
 
+基于 scsslint 验证 sass 代码是否规范
 https://sass-guidelin.es/#tools
 
 ### codelyzer
 
+基于 codelyzer 检测 ts 代码是否符合规范
 see: https://github.com/mgechev/codelyzer
 
 ```bash
@@ -113,19 +81,20 @@ npm i tslint-angular
 
 ### husky
 
-> usky can prevent bad git commit, git push and more
-
-https://www.npmjs.com/package/husky
+通过 husky 可以执行生命周期内的相关钩子，自动验证代码的是否符合规范  
+see: https://www.npmjs.com/package/husky
 
 ### type doc
 
-自动根据注释生成文档的工具，前提是你自己得写好注释 see: https://github.com/TypeStrong/typedoc/
+自动根据注释生成文档的工具，前提是你自己得写好注释  
+see: https://github.com/TypeStrong/typedoc/
+
+### better-npm-run
+
+能够去除配置文件硬编码,
+see: https://github.com/benoror/better-npm-run
 
 ### ionic docker (TODO)
 
+能够屏蔽部署环境差异，
 see: https://github.com/marcoturi/ionic-docker
-
-### better-npm-run (TODO)
-
-能够去除配置文件硬编码
-see: https://github.com/benoror/better-npm-run
