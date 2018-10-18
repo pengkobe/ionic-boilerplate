@@ -44,6 +44,7 @@ commitizen init cz-conventional-changelog --save --save-exact
 - 本地存储 √
 - 钩子( hooks ) √
 - NGRX √
+- 支持 RxJS@6+
 - 技巧与工具( VSCODE、谷歌控制台等 )
 - 主题( 换肤 ) √
 - 常用组件
