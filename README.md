@@ -47,6 +47,7 @@ commitizen init cz-conventional-changelog --save --save-exact
 - 支持 RxJS@6+
 - 技巧与工具( VSCODE、谷歌控制台等 )
 - 主题( 换肤 ) √
+- 集成 echarts √
 - 常用组件
 - 用户行为
 
@@ -135,6 +136,10 @@ npm install raven-js --save
 
 - 官网：https://www.talkingdata.com/
 - 集成文档: http://doc.talkingdata.com/posts/143
+
+## 集成 echarts
+
+see: https://golb.hplar.ch/2017/02/Integrate-ECharts-into-an-Ionic-2-app.html
 
 ## 技巧与工具( VSCODE、谷歌控制台等 )
 

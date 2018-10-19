@@ -19,7 +19,8 @@
       "@directives/*": ["src/directives/*"],
       "@pipes/*": ["src/pipes/*"],
       "@app/*": ["src/app/*"],
-      "@root/*": ["./*"]
+      "@root/*": ["./*"],
+      "echarts": ["node_modules/echarts/dist/echarts.min.js"]
     }
   },
   "include": ["src/**/*.ts"],

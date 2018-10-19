@@ -2,6 +2,7 @@ import { Component, Output, EventEmitter } from '@angular/core';
 import { NavController, NavParams, ModalController } from 'ionic-angular';
 import lodash from 'lodash';
 import { Insomnia } from '@ionic-native/insomnia';
+import { EChartOption } from 'echarts';
 import { GlobalService } from '@providers/global.service';
 /**
  * Generated class for the TestPage page.
@@ -18,6 +19,38 @@ export class TestPage {
   isAlwaysLight = false;
 
   languageType: string;
+
+  options: EChartOption = {
+    color: ['#3398DB'],
+    grid: {
+      left: '3%',
+      right: '4%',
+      bottom: '3%',
+      containLabel: true
+    },
+    xAxis: [
+      {
+        type: 'category',
+        data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+        axisTick: {
+          alignWithLabel: true
+        }
+      }
+    ],
+    yAxis: [
+      {
+        type: 'value'
+      }
+    ],
+    series: [
+      {
+        name: 'Test',
+        type: 'bar',
+        barWidth: '60%',
+        data: [10, 52, 200, 334, 390, 330, 220]
+      }
+    ]
+  };
   
   @Output()
   successScaned: EventEmitter<any> = new EventEmitter();

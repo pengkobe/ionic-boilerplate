@@ -11,6 +11,7 @@ import { Network } from '@ionic-native/network';
 import { BackgroundMode } from '@ionic-native/background-mode';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { NgxEchartsModule } from 'ngx-echarts';
 
 import { CoreModule } from '../core/core.module';
 import { SharedModule } from '../shared/shared.module';
@@ -32,6 +33,7 @@ import { TabsPage } from '../pages/tabs/tabs';
     CoreModule,
     SharedModule,
     BrowserModule,
+    NgxEchartsModule,
     IonicStorageModule.forRoot(),
     IonicModule.forRoot(MyApp),
     StoreModule.forRoot({}),
