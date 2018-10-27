@@ -24,7 +24,7 @@ import { CoreModule } from '../core/core.module';
 import { SharedModule } from '../shared/shared.module';
 
 import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
+import { TabsPage } from '../pages/tabs/tabs';
 
 class IonicAppMock { }
 
@@ -70,6 +70,6 @@ describe('MyApp Component', () => {
   });
 
   it('should rootPage equals to HomePage', () => {
-    expect(component.rootPage).toBe(HomePage);
+    expect(component.rootPage).toBe(TabsPage);
   });
 });
