@@ -5,6 +5,8 @@ import lodash from 'lodash';
 import { Insomnia } from '@ionic-native/insomnia';
 import { EChartOption } from 'echarts';
 import { GlobalService } from '@providers/global.service';
+import { EmitService } from '@providers/emit.service';
+
 /**
  * Generated class for the TestPage page.
  *
@@ -63,11 +65,16 @@ export class TestPage {
     public navParams: NavParams,
     private insomnia: Insomnia,
     public globalservice: GlobalService,
-    public modalCtrl: ModalController
+    public modalCtrl: ModalController,
+    public emit: EmitService
   ) {}
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad TestPage');
+
+    this.languageType = this.globalservice.languageType
+      ? this.globalservice.languageType
+      : 'zh';
   }
 
   open(format: boolean = false) {
@@ -117,7 +124,10 @@ export class TestPage {
     }
   }
 
-  setLanguageType() {}
+  setLanguageType(val) {
+    this.globalservice.languageType = val;
+    this.emit.eventEmit.emit('languageType');
+  }
 
   toEcharts() {
     this.navCtrl.push(EchartsPage);

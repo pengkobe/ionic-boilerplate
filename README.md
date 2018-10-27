@@ -162,12 +162,12 @@ https://github.com/marcoturi/ionic-boilerplate
 
 ## TODO
 
-[x] 中英文切换示例  
-[] cordova 插件能力示例  
-[] 文档完善  
-[] 部署  
-[] 用户行为统计示例  
-[] 常用组件完善
+- [x] 中英文切换示例
+- [] cordova 插件能力示例
+- [] 文档完善
+- [] 部署说明
+- [] 用户行为统计示例
+- [] 常用组件完善
 
 ## License
 

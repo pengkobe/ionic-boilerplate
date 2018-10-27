@@ -26,6 +26,7 @@ import { TestPage } from '../pages/test/test';
 import { TabsPage } from '../pages/tabs/tabs';
 
 import { EchartsPage } from '../pages/test/echarts/echarts';
+import { EmitService } from '@providers/emit.service';
 
 // import { RavenErrorHandler } from './raven-error-handler.';
 
@@ -53,6 +54,7 @@ import { EchartsPage } from '../pages/test/echarts/echarts';
     Insomnia,
     Network,
     { provide: ErrorHandler, useClass: IonicErrorHandler },
+    EmitService,
     // { provide: ErrorHandler, useClass: RavenErrorHandler }
   ],
 })

@@ -41,8 +41,8 @@
           <ion-icon name="musical-notes" item-start color="primary"></ion-icon>
           <ion-label>语言切换</ion-label>
           <ion-select [(ngModel)]="languageType" (ngModelChange)="setLanguageType($event)" cancelText="取消" okText="确定">
-            <ion-option value="1" selected="true">中文</ion-option>
-            <ion-option value="2">英文</ion-option>
+            <ion-option value="zh" selected="true">中文</ion-option>
+            <ion-option value="en">英文</ion-option>
           </ion-select>
         </ion-item>
       </ion-col>

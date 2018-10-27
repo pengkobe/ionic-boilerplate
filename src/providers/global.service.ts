@@ -19,6 +19,7 @@ export class GlobalService {
   private _userinfo: any;
   private _jpushAlias: any;
   private _isAlwaysLight = false;
+  private _languageType;
 
   constructor(public events: Events) {}
 
@@ -168,12 +169,14 @@ export class GlobalService {
     } else {
       const isAlwaysLight = localStorage.getItem('isAlwaysLight');
       if (isAlwaysLight === 'false') {
-        return false;
+        this._isAlwaysLight = false;
       } else {
-        return true;
+        this._isAlwaysLight = true;
       }
+      return this._isAlwaysLight;
     }
   }
+
   set isAlwaysLight(value: boolean) {
     this._isAlwaysLight = value;
     let str = '';
@@ -183,6 +186,20 @@ export class GlobalService {
       str = 'false';
     }
     localStorage.setItem('isAlwaysLight', str);
+  }
+
+  get languageType() {
+    if (this._languageType) {
+      return this._languageType;
+    } else {
+      const languageType = localStorage.getItem('languageType');
+      this._languageType = languageType;
+      return languageType;
+    }
+  }
+  set languageType(value: string) {
+    this._languageType = value;
+    localStorage.setItem('languageType', value);
   }
 
   /**
@@ -217,5 +234,4 @@ export class GlobalService {
       data: data,
     });
   }
-
 }
