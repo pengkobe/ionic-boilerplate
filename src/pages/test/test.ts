@@ -1,3 +1,4 @@
+import { EchartsPage } from './echarts/echarts';
 import { Component, Output, EventEmitter } from '@angular/core';
 import { NavController, NavParams, ModalController } from 'ionic-angular';
 import lodash from 'lodash';
@@ -26,32 +27,32 @@ export class TestPage {
       left: '3%',
       right: '4%',
       bottom: '3%',
-      containLabel: true
+      containLabel: true,
     },
     xAxis: [
       {
         type: 'category',
         data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
         axisTick: {
-          alignWithLabel: true
-        }
-      }
+          alignWithLabel: true,
+        },
+      },
     ],
     yAxis: [
       {
-        type: 'value'
-      }
+        type: 'value',
+      },
     ],
     series: [
       {
         name: 'Test',
         type: 'bar',
         barWidth: '60%',
-        data: [10, 52, 200, 334, 390, 330, 220]
-      }
-    ]
+        data: [10, 52, 200, 334, 390, 330, 220],
+      },
+    ],
   };
-  
+
   @Output()
   successScaned: EventEmitter<any> = new EventEmitter();
   @Output()
@@ -116,7 +117,9 @@ export class TestPage {
     }
   }
 
-  setLanguageType(){
-    
+  setLanguageType() {}
+
+  toEcharts() {
+    this.navCtrl.push(EchartsPage);
   }
 }

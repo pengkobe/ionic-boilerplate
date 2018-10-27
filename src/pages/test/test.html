@@ -50,8 +50,10 @@
 
     <ion-row>
       <ion-col col-12>
-        <ion-label>echarts 演示</ion-label>
-        <div echarts [options]="options" class="demo-chart"></div>
+        <ion-item (click)="toEcharts()">
+          <ion-icon name="speedometer" item-start color="primary"></ion-icon>
+          <ion-label>echarts 演示</ion-label>
+        </ion-item>
       </ion-col>
     </ion-row>
   </ion-grid>
