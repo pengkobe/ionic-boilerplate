@@ -27,6 +27,7 @@ import { TabsPage } from '../pages/tabs/tabs';
 
 import { EchartsPage } from '../pages/test/echarts/echarts';
 import { EmitService } from '@providers/emit.service';
+import { TranslateUtilService } from '@providers/translateUtil.service';
 
 // import { RavenErrorHandler } from './raven-error-handler.';
 
@@ -55,6 +56,7 @@ import { EmitService } from '@providers/emit.service';
     Network,
     { provide: ErrorHandler, useClass: IonicErrorHandler },
     EmitService,
+    TranslateUtilService,
     // { provide: ErrorHandler, useClass: RavenErrorHandler }
   ],
 })

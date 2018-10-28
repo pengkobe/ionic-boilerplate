@@ -7,6 +7,9 @@ import { GlobalService } from '@providers/global.service';
 import { UpdateService } from '@providers/update.service';
 import { NativeService } from '@providers/native.service';
 
+import { TranslateService } from '@ngx-translate/core';
+import { EmitService } from '@providers/emit.service';
+
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { TestPage } from '../pages/test/test';
@@ -36,7 +39,10 @@ export class MyApp {
     public native: NativeService,
     public updateService: UpdateService,
     public ionicApp: IonicApp,
-    public toastCtrl: ToastController
+    public toastCtrl: ToastController,
+    public translate: TranslateService,
+    public globalservice: GlobalService,
+    public emit: EmitService
   ) {
     this.initializeApp();
 
@@ -46,6 +52,21 @@ export class MyApp {
       { title: 'List', component: ListPage },
       { title: 'test', component: TestPage },
     ];
+
+    translate.addLangs(['en', 'zh']);
+    translate.setDefaultLang('en');
+    if (this.globalservice.languageType) {
+      translate.use(this.globalservice.languageType);
+    } else {
+      const browserLang = translate.getBrowserLang();
+      translate.use(browserLang.match(/en|zh/) ? browserLang : 'en');
+    }
+
+    this.emit.eventEmit.subscribe(val => {
+      if (val == 'languageType') {
+        translate.use(this.globalservice.languageType);
+      }
+    });
   }
 
   initializeApp() {

@@ -1,4 +1,3 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable, EventEmitter, OnInit } from '@angular/core';
 
 /*
@@ -11,10 +10,8 @@ import { Injectable, EventEmitter, OnInit } from '@angular/core';
 export class EmitService implements OnInit {
   public eventEmit: EventEmitter<any>;
 
-  constructor(public http: HttpClient) {
+  constructor() {
     console.log('Hello EmitService Provider');
-
-    // 定义发射事件
     this.eventEmit = new EventEmitter();
   }
 
