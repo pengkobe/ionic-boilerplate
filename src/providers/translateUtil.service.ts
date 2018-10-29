@@ -1,31 +1,31 @@
-import { Injectable, OnInit, Injector } from '@angular/core';
-import { TranslateService } from '@ngx-translate/core';
-import { GlobalService } from '@providers/global.service';
-import { EmitService } from '@providers/emit.service';
+export interface ITranslate {
+  ngOnInit?: Function;
+  ngOnDestroy?: Function;
+  emit: any;
+  translate: any;
+  globalservice: any;
+}
 
-@Injectable()
-export class TranslateUtilService implements OnInit {
-  constructor(
-    public translate: TranslateService,
-    public globalservice: GlobalService,
-    public emit: EmitService,
-    private injector: Injector
-  ) {
-    translate.addLangs(['en', 'zh']);
-    translate.setDefaultLang('en');
-    if (this.globalservice.languageType) {
-      translate.use(this.globalservice.languageType);
-    } else {
-      const browserLang = translate.getBrowserLang();
-      translate.use(browserLang.match(/en|zh/) ? browserLang : 'en');
-    }
-
-    this.emit.eventEmit.subscribe(val => {
-      if (val == 'languageType') {
-        translate.use(this.globalservice.languageType);
+export function TranslateMethodDecorator() {
+  return (classProto: ITranslate, prop, decorator) => {
+    const ngOnInitUnpatched = classProto.ngOnInit;
+    classProto.ngOnInit = function(this: ITranslate) {
+      this.translate.addLangs(['en', 'zh']);
+      this.translate.setDefaultLang('en');
+      if (this.globalservice.languageType) {
+        this.translate.use(this.globalservice.languageType);
+      } else {
+        const browserLang = this.translate.getBrowserLang();
+        this.translate.use(browserLang.match(/en|zh/) ? browserLang : 'en');
       }
-    });
-  }
 
-  ngOnInit() {}
+      this.emit.eventEmit.subscribe(val => {
+        if (val === 'languageType') {
+          this.translate.use(this.globalservice.languageType);
+        }
+      });
+    };
+
+    if (ngOnInitUnpatched) return ngOnInitUnpatched.call(this);
+  };
 }
