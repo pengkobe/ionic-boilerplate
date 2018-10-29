@@ -7,7 +7,10 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>Test</ion-title>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>{{'HOME.Test' | translate}}</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -44,15 +47,6 @@
             <ion-option value="zh" selected="true">中文</ion-option>
             <ion-option value="en">英文</ion-option>
           </ion-select>
-        </ion-item>
-      </ion-col>
-    </ion-row>
-
-    <ion-row>
-      <ion-col col-12>
-        <ion-item (click)="toEcharts()">
-          <ion-icon name="speedometer" item-start color="primary"></ion-icon>
-          <ion-label>echarts 演示</ion-label>
         </ion-item>
       </ion-col>
     </ion-row>

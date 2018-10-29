@@ -25,7 +25,7 @@ import { ListPage } from '../pages/list/list';
 import { TestPage } from '../pages/test/test';
 import { TabsPage } from '../pages/tabs/tabs';
 
-import { EchartsPage } from '../pages/test/echarts/echarts';
+import { EchartsPage } from '../pages/list/echarts/echarts';
 import { EmitService } from '@providers/emit.service';
 
 // import { RavenErrorHandler } from './raven-error-handler.';

@@ -1,4 +1,3 @@
-import { EchartsPage } from './echarts/echarts';
 import { Component, Output, EventEmitter } from '@angular/core';
 import { NavController, NavParams, ModalController } from 'ionic-angular';
 import lodash from 'lodash';
@@ -129,7 +128,4 @@ export class TestPage {
     this.emit.eventEmit.emit('languageType');
   }
 
-  toEcharts() {
-    this.navCtrl.push(EchartsPage);
-  }
 }
