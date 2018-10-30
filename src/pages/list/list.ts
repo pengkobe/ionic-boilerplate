@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { EchartsPage } from './echarts/echarts';
+import { CalendarPage } from './calendar/calendar';
 
 @Component({
   selector: 'page-list',
@@ -22,25 +23,21 @@ export class ListPage {
         icon: 'speedometer',
       },
       {
-        title: '日历组件 ',
+        title: 'calendar',
         note: '',
         icon: 'calendar',
-      },
-      {
-        title: '通讯录组件 ',
-        note: '',
-        icon: 'contacts',
       },
     ];
   }
 
   itemTapped(event, item) {
-    // That's right, we're pushing to ourselves!
-    // this.navCtrl.push(ListPage, {
-    //   item: item,
-    // });
     if (item.title === 'echarts') {
       this.navCtrl.push(EchartsPage, {
+        item: item,
+      });
+    }
+    if (item.title === 'calendar') {
+      this.navCtrl.push(CalendarPage, {
         item: item,
       });
     }

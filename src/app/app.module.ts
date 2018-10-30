@@ -18,6 +18,7 @@ import { SharedModule } from '../shared/shared.module';
 
 import { EffectsModule } from '@ngrx/effects';
 import { StoreModule } from '@ngrx/store';
+import { CalendarModule } from "ion2-calendar";
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -26,24 +27,43 @@ import { TestPage } from '../pages/test/test';
 import { TabsPage } from '../pages/tabs/tabs';
 
 import { EchartsPage } from '../pages/list/echarts/echarts';
+import { CalendarPage } from '../pages/list/calendar/calendar';
+
 import { EmitService } from '@providers/emit.service';
 
 // import { RavenErrorHandler } from './raven-error-handler.';
 
 @NgModule({
-  declarations: [MyApp, HomePage, ListPage, TestPage, TabsPage, EchartsPage],
+  declarations: [
+    MyApp,
+    HomePage,
+    ListPage,
+    TestPage,
+    TabsPage,
+    EchartsPage,
+    CalendarPage,
+  ],
   imports: [
     CoreModule,
     SharedModule,
     BrowserModule,
     NgxEchartsModule,
+    CalendarModule,
     IonicStorageModule.forRoot(),
     IonicModule.forRoot(MyApp),
     StoreModule.forRoot({}),
     EffectsModule.forRoot([]),
   ],
   bootstrap: [IonicApp],
-  entryComponents: [MyApp, HomePage, ListPage, TestPage, TabsPage, EchartsPage],
+  entryComponents: [
+    MyApp,
+    HomePage,
+    ListPage,
+    TestPage,
+    TabsPage,
+    EchartsPage,
+    CalendarPage,
+  ],
   providers: [
     StatusBar,
     SplashScreen,

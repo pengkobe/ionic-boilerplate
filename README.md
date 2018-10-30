@@ -44,7 +44,7 @@ commitizen init cz-conventional-changelog --save --save-exact
 - 本地存储 √
 - 钩子( hooks ) √
 - NGRX √
-- 支持 RxJS@6+  √
+- 支持 RxJS@6+ √
 - 技巧与工具( VSCODE、谷歌控制台等 )
 - 主题( 换肤 ) √
 - 集成 echarts √
@@ -150,6 +150,7 @@ see: [tools](./doc/tools.md)
 这里提供的常用组件有这些( 更多待开发 )
 
 - 二维码扫描
+- 日历，see: https://github.com/HsuanXyz/ion2-calendar
 
 ## 换肤
 
