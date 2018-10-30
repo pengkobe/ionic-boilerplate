@@ -1,5 +1,12 @@
 import { Component, ViewChild } from '@angular/core';
-import { App, Platform, IonicApp, Nav, ToastController, Events } from 'ionic-angular';
+import {
+  App,
+  Platform,
+  IonicApp,
+  Nav,
+  ToastController,
+  Events,
+} from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
@@ -53,20 +60,7 @@ export class MyApp {
       { title: 'Test', component: TestPage },
     ];
 
-    translate.addLangs(['en', 'zh']);
-    translate.setDefaultLang('en');
-    if (this.globalservice.languageType) {
-      translate.use(this.globalservice.languageType);
-    } else {
-      const browserLang = translate.getBrowserLang();
-      translate.use(browserLang.match(/en|zh/) ? browserLang : 'en');
-    }
-
-    this.emit.eventEmit.subscribe(val => {
-      if (val == 'languageType') {
-        translate.use(this.globalservice.languageType);
-      }
-    });
+    this.initTranslate();
   }
 
   initializeApp() {
@@ -87,6 +81,23 @@ export class MyApp {
     });
     this.events.subscribe('qrScanner:hide', () => {
       this.hideNav = false;
+    });
+  }
+
+  initTranslate() {
+    this.translate.addLangs(['en', 'zh']);
+    this.translate.setDefaultLang('en');
+    if (this.globalservice.languageType) {
+      this.translate.use(this.globalservice.languageType);
+    } else {
+      const browserLang = this.translate.getBrowserLang();
+      this.translate.use(browserLang.match(/en|zh/) ? browserLang : 'en');
+    }
+
+    this.emit.eventEmit.subscribe(val => {
+      if (val === 'languageType') {
+        this.translate.use(this.globalservice.languageType);
+      }
     });
   }
 

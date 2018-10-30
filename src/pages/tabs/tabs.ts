@@ -6,12 +6,11 @@ import { TestPage } from '../test/test';
 import { TranslateService } from '@ngx-translate/core';
 import { GlobalService } from '@providers/global.service';
 import { EmitService } from '@providers/emit.service';
-import { TranslateMethodDecorator, ITranslate } from '@providers/translateUtil.service';
 
 @Component({
   templateUrl: 'tabs.html',
 })
-export class TabsPage implements OnInit, ITranslate {
+export class TabsPage implements OnInit {
   tab1Root = HomePage;
   tab2Root = ListPage;
   tab3Root = TestPage;
@@ -21,6 +20,5 @@ export class TabsPage implements OnInit, ITranslate {
     public emit: EmitService
   ) {}
 
-  @TranslateMethodDecorator()
   ngOnInit() {}
 }
