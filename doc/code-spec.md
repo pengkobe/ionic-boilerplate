@@ -84,15 +84,29 @@ npm i tslint-angular
 通过 husky 可以执行生命周期内的相关钩子，自动验证代码的是否符合规范  
 see: https://www.npmjs.com/package/husky
 
+```bash
+npm install husky --save-dev
+```
+
 ### type doc
 
 自动根据注释生成文档的工具，前提是你自己得写好注释  
-see: https://github.com/TypeStrong/typedoc/
+see: https://github.com/TypeStrong/typedoc/  
+建议全局安装
+
+```bash
+npm install typedoc --global
+typedoc
+```
 
 ### better-npm-run
 
 能够去除配置文件硬编码,
 see: https://github.com/benoror/better-npm-run
+
+```bash
+ npm install better-npm-run --save-dev
+```
 
 ### ionic docker (TODO)
 
