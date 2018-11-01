@@ -52,7 +52,12 @@ see: https://github.com/conventional-changelog/standard-version
 see: https://github.com/marionebl/commitlint
 
 本脚手架使用 angular 规则， 详情参见:  
-https://github.com/marionebl/commitlint/tree/master/@commitlint/config-angular
+https://github.com/marionebl/commitlint/tree/master/@commitlint/config-angular  
+
+```bash
+npm install @commitlint/cli --save-dev
+npm install @commitlint/config-angular --save-dev
+```
 
 ## 代码规范
 
