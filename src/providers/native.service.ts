@@ -1,8 +1,8 @@
 /**
  * 常用原生服务
- * 1. 网络状态
- * 2. 文件下载
- * 3. 屏幕常亮
+ *  - 网络状态
+ *  - 件下载
+ *  - 屏幕常亮
  */
 
 import { Injectable } from '@angular/core';
@@ -11,6 +11,8 @@ import { GlobalService } from './global.service';
 import { Insomnia } from '@ionic-native/insomnia';
 import { Network } from '@ionic-native/network';
 import { FileTransfer, FileTransferObject } from '@ionic-native/file-transfer';
+
+declare var window;
 
 @Injectable()
 export class NativeService {
@@ -101,25 +103,25 @@ export class NativeService {
   }
 
   /**
-   * 显示消息
-   * @param msg 消息
+   * create toast
+   * @param msg
    */
-  createToast() {
+  createToast(msg = '') {
     this.toast = this.toastCtrl.create({
-      message: '',
+      message: msg,
       duration: 3000,
       position: 'top',
       cssClass: 'my-toast-style',
       showCloseButton: true,
-      closeButtonText: '关闭',
+      closeButtonText: 'Close',
       dismissOnPageChange: true,
     });
   }
 
   /**
-   * 文件下载
+   * file download
    * @param remotepath
-   * @param targetPathWithFileName 带文件名的下载地址
+   * @param targetPathWithFileName
    */
   filedownload(remotepath, targetPathWithFileName) {
     return new Promise((resolve, reject) => {
@@ -131,17 +133,20 @@ export class NativeService {
       const trustHosts = true;
       const fileTransfer: FileTransferObject = this.transfer.create();
       fileTransfer
-        .download(remotepath, targetPathWithFileName, trustHosts, options)
+        .download(
+          window.encodeURI(remotepath),
+          targetPathWithFileName,
+          trustHosts,
+          options
+        )
         .then(result => {
-          console.log('filedownload： 下载完成..');
           resolve(result.toURL());
         })
         .catch(err => {
-          reject('ERR:下载出错');
-          console.log('filedownload： 下载出错', err);
+          reject(err);
         });
       fileTransfer.onProgress((evt: ProgressEvent) => {
-        console.log(evt);
+        // show download progress
       });
     });
   }
