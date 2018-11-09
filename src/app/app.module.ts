@@ -29,8 +29,6 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { EchartsPage } from '../pages/list/echarts/echarts';
 import { CalendarPage } from '../pages/list/calendar/calendar';
 
-import { EmitService } from '@providers/emit.service';
-
 // import { RavenErrorHandler } from './raven-error-handler.';
 
 @NgModule({
@@ -74,7 +72,6 @@ import { EmitService } from '@providers/emit.service';
     Insomnia,
     Network,
     { provide: ErrorHandler, useClass: IonicErrorHandler },
-    EmitService,
     // { provide: ErrorHandler, useClass: RavenErrorHandler }
   ],
 })
