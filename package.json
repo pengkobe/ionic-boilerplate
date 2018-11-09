@@ -33,6 +33,7 @@
   "config": {
     "ionic_webpack": "./config/webpack.config.js",
     "ionic_copy": "./config/copy.config.js",
+    "ionic_generate_source_map": "true",
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
@@ -47,7 +48,7 @@
     "@angular/animations": "5.2.11",
     "@angular/common": "5.2.11",
     "@angular/compiler": "5.2.11",
-    "@angular/compiler-cli": "5.2.11", 
+    "@angular/compiler-cli": "5.2.11",
     "@angular/core": "5.2.11",
     "@angular/forms": "5.2.11",
     "@angular/http": "5.2.11",
@@ -81,9 +82,9 @@
     "ionicons": "3.0.0",
     "moment": "^2.22.2",
     "ngx-echarts": "^4.0.0",
-    "raven-js": "^3.27.0",
     "rxjs": "^6.2.2",
     "rxjs-compat": "^6.2.2",
+    "sentry-cordova": "^0.12.3",
     "sw-toolbox": "3.6.0",
     "zone.js": "0.8.26"
   },
@@ -167,7 +168,8 @@
       "jpush-phonegap-plugin": {
         "APP_KEY": "e4fad56dc2d40b58d77629f7"
       },
-      "cordova-plugin-ionic-keyboard": {}
+      "cordova-plugin-ionic-keyboard": {},
+      "sentry-cordova": {}
     },
     "platforms": []
   }

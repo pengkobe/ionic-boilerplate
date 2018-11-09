@@ -29,7 +29,7 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { EchartsPage } from '../pages/list/echarts/echarts';
 import { CalendarPage } from '../pages/list/calendar/calendar';
 
-// import { RavenErrorHandler } from './raven-error-handler.';
+import { SentryIonicErrorHandler } from './sentry-error-handler.';
 
 @NgModule({
   declarations: [
@@ -72,7 +72,7 @@ import { CalendarPage } from '../pages/list/calendar/calendar';
     Insomnia,
     Network,
     { provide: ErrorHandler, useClass: IonicErrorHandler },
-    // { provide: ErrorHandler, useClass: RavenErrorHandler }
+    // { provide: ErrorHandler, useClass: SentryIonicErrorHandler }
   ],
 })
 export class AppModule {}
