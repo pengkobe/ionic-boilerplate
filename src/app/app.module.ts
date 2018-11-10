@@ -19,6 +19,8 @@ import { SharedModule } from '../shared/shared.module';
 import { EffectsModule } from '@ngrx/effects';
 import { StoreModule } from '@ngrx/store';
 import { CalendarModule } from "ion2-calendar";
+import { RebirthStorageModule } from 'rebirth-storage';
+import { RebirthHttpModule } from 'rebirth-http';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -71,6 +73,8 @@ import { SentryIonicErrorHandler } from './sentry-error-handler.';
     FileOpener,
     Insomnia,
     Network,
+    RebirthStorageModule,
+    RebirthHttpModule,
     { provide: ErrorHandler, useClass: IonicErrorHandler },
     // { provide: ErrorHandler, useClass: SentryIonicErrorHandler }
   ],
