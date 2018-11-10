@@ -18,8 +18,8 @@ commitizen init cz-conventional-changelog --save --save-exact
 
 - 开发流程与代码规范, see [README-dev-spec](./doc/code-spec.md)
   - git √
-  - 实用工具 √
-  - 持续集成 √
+  - 实用工具介绍 √
+  - 代码检测 √
   - 部署
 - 运行环境介绍 √
 - 测试支持[单元测试/端到端测试] √
@@ -41,14 +41,18 @@ commitizen init cz-conventional-changelog --save --save-exact
   - 地理定位 √
 - 错误上报 √
 - http √
+  - rebirth-http √
 - 本地存储 √
+  - rebirth-storage √
 - 钩子( hooks ) √
 - NGRX √
 - 支持 RxJS@6+ √
 - 技巧与工具( VSCODE、谷歌控制台等 )
-- 主题( 换肤 ) √
 - 集成 echarts √
-- 常用组件
+- 常用组件 √
+  - 二维码扫描 √
+  - 日历 √
+- 主题更换
 - 用户行为
 
 ## 运行环境介绍
@@ -147,7 +151,7 @@ see: [tools](./doc/tools.md)
 
 ## 常用组件
 
-这里提供的常用组件有这些( 更多待开发 )
+这里提供的常用组件有这些
 
 - 二维码扫描
 - 日历，see: https://github.com/HsuanXyz/ion2-calendar
@@ -160,15 +164,6 @@ https://ionicframework.com/docs/theming/
 ## 参考
 
 https://github.com/marcoturi/ionic-boilerplate
-
-## TODO
-
-- [x] 中英文切换示例
-- [ ] cordova 插件能力示例
-- [ ] 文档完善
-- [ ] 部署说明
-- [ ] 用户行为统计示例
-- [ ] 常用组件完善
 
 ## License
 
