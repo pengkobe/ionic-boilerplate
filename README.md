@@ -140,6 +140,7 @@ npm install raven-js --save
 
 - 官网：https://www.talkingdata.com/
 - 集成文档: http://doc.talkingdata.com/posts/143
+- Cordova 插件模板: https://github.com/TalkingData/AppAnalytics_SDK_Cordova 
 
 ## 集成 echarts
 
