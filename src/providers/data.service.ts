@@ -23,8 +23,11 @@
  */
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams, HttpHeaders } from '@angular/common/http';
+import { Cacheable } from 'rebirth-storage';
 
-import { Observable, BehaviorSubject, Subject } from 'rxjs';
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
+
 import * as querystring from 'querystring';
 import { baseUrl } from '../config';
 
@@ -45,5 +48,21 @@ export class DataService {
       headers: this.headers,
       params: params,
     });
+  }
+
+  @Cacheable({ pool: 'test' })
+  testCachedData(): Observable<any> {
+    const obs = Observable.create(observer => {
+      setTimeout(() => {
+        observer.next(Math.random());
+        observer.complete();
+      }, 10);
+    });
+    obs.pipe(
+      map(res => {
+        return res;
+      })
+    );
+    return obs;
   }
 }
