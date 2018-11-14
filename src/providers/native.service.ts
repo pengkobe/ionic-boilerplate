@@ -11,6 +11,8 @@ import { GlobalService } from './global.service';
 import { Insomnia } from '@ionic-native/insomnia';
 import { Network } from '@ionic-native/network';
 import { FileTransfer, FileTransferObject } from '@ionic-native/file-transfer';
+import { AppCenterAnalytics } from '@ionic-native/app-center-analytics';
+import { AppCenterCrashes } from '@ionic-native/app-center-crashes';
 
 declare var window;
 
@@ -27,13 +29,29 @@ export class NativeService {
     private insomnia: Insomnia,
     private toastCtrl: ToastController,
     private transfer: FileTransfer,
-    private network: Network
+    private network: Network,
+    private appCenterAnalytics: AppCenterAnalytics,
+    private appCenterCrashes: AppCenterCrashes
   ) {}
 
   /**
    * 初始化
    */
-  init() {}
+  initAnalytics() {
+    this.appCenterAnalytics.setEnabled(true).then(() => {
+      this.appCenterAnalytics
+        .trackEvent('Init', { TEST: 'yipeng.ionic3' })
+        .then(() => {
+          console.log('AppCenter Analytics event tracked');
+        });
+    });
+
+    this.appCenterCrashes.setEnabled(true).then(() => {
+      this.appCenterCrashes.lastSessionCrashReport().then(report => {
+        console.log('Crash report', report);
+      });
+    });
+  }
 
   /**
    * 初始化 Native 服务

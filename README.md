@@ -52,8 +52,8 @@ commitizen init cz-conventional-changelog --save --save-exact
 - 常用组件 √
   - 二维码扫描 √
   - 日历 √
+- 用户行为 √
 - 主题更换
-- 用户行为
 
 ## 运行环境介绍
 
@@ -136,11 +136,19 @@ npm install raven-js --save
 
 ## 用户行为
 
+### 方案 1
+
 基于 TalkingData 进行统计，Github 上有相应 Cordova 插件，需要在官网下载最新库文件，手动进行集成
 
 - 官网：https://www.talkingdata.com/
 - 集成文档: http://doc.talkingdata.com/posts/143
-- Cordova 插件模板: https://github.com/TalkingData/AppAnalytics_SDK_Cordova 
+- Cordova 插件模板: https://github.com/TalkingData/AppAnalytics_SDK_Cordova
+
+### 方案 2
+
+- 基于 微软的 [appcenter-sdk-cordova](https://github.com/Microsoft/appcenter-sdk-cordova)
+- 官网: https://appcenter.ms/
+- 文档: https://docs.microsoft.com/en-us/appcenter/sdk/analytics/cordova
 
 ## 集成 echarts
 

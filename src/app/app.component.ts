@@ -74,6 +74,8 @@ export class MyApp {
       this.native.initNativeService();
 
       this.registerBackButtonAction();
+
+      this.native.initAnalytics();
     });
 
     this.events.subscribe('qrScanner:show', () => {
