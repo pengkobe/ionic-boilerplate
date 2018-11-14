@@ -22,6 +22,8 @@ import { ListPage } from '../pages/list/list';
 import { TestPage } from '../pages/test/test';
 import { TabsPage } from './../pages/tabs/tabs';
 
+declare var window;
+
 @Component({
   templateUrl: 'app.html',
 })
@@ -69,13 +71,12 @@ export class MyApp {
       this.statusBar.styleDefault();
       this.statusBar.backgroundColorByHexString('#f8f8f8');
       this.splashScreen.hide();
-
-      this.updateService.checkUpdate();
-      this.native.initNativeService();
-
-      this.registerBackButtonAction();
-
-      this.native.initAnalytics();
+      if (window.cordova) {
+        this.updateService.checkUpdate();
+        this.native.initNativeService();
+        this.registerBackButtonAction();
+        this.native.initAppCenter();
+      }
     });
 
     this.events.subscribe('qrScanner:show', () => {

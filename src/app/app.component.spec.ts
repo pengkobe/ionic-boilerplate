@@ -13,13 +13,6 @@ import {
   NavMock,
 } from '../../test-config/mocks-ionic';
 
-import { FileTransfer } from '@ionic-native/file-transfer';
-import { FileOpener } from '@ionic-native/file-opener';
-import { File } from '@ionic-native/file';
-import { Insomnia } from '@ionic-native/insomnia';
-import { Network } from '@ionic-native/network';
-import { BackgroundMode } from '@ionic-native/background-mode';
-
 import { CoreModule } from '../core/core.module';
 import { SharedModule } from '../shared/shared.module';
 
@@ -42,15 +35,9 @@ describe('MyApp Component', () => {
         SharedModule,
       ],
       providers: [
-        Network,
-        Insomnia,
-        File,
-        FileTransfer,
-        FileOpener,
         GlobalService,
         UpdateService,
         NativeService,
-        BackgroundMode,
         { provide: IonicApp, useClass: IonicAppMock },
         { provide: StatusBar, useClass: StatusBarMock },
         { provide: SplashScreen, useClass: SplashScreenMock },

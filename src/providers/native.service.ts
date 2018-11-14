@@ -37,7 +37,7 @@ export class NativeService {
   /**
    * 初始化
    */
-  initAnalytics() {
+  initAppCenter() {
     this.appCenterAnalytics.setEnabled(true).then(() => {
       this.appCenterAnalytics
         .trackEvent('Init', { TEST: 'yipeng.ionic3' })
