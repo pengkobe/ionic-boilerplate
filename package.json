@@ -1,6 +1,6 @@
 {
   "name": "ionic-boilerplate",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "author": "pengkobe",
   "homepage": "https://github.com/pengkobe/ionic-boilerplate",
   "private": true,
@@ -80,6 +80,7 @@
     "cordova-plugin-appcenter-analytics": "^0.2.0",
     "cordova-plugin-appcenter-crashes": "^0.2.0",
     "cordova-plugin-appcenter-shared": "^0.2.0",
+    "cordova-plugin-file-opener2": "^2.1.4",
     "cordova-plugin-ionic-keyboard": "^2.1.3",
     "echarts": "^4.2.0-rc.2",
     "ion2-calendar": "^2.2.0",
@@ -156,7 +157,6 @@
         "PHOTOLIBRARY_USAGE_DESCRIPTION": " "
       },
       "cordova-plugin-datepicker": {},
-      "cordova-plugin-file-opener2": {},
       "cordova-plugin-file-transfer": {},
       "cordova-plugin-network-information": {},
       "cordova-plugin-pause-resume-download": {},
@@ -178,7 +178,10 @@
       "cordova-plugin-ionic-keyboard": {},
       "sentry-cordova": {},
       "cordova-plugin-appcenter-analytics": {},
-      "cordova-plugin-appcenter-crashes": {}
+      "cordova-plugin-appcenter-crashes": {},
+      "cordova-plugin-file-opener2": {
+        "ANDROID_SUPPORT_V4_VERSION": "27.+"
+      }
     },
     "platforms": []
   }
